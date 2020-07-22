@@ -7,6 +7,6 @@ export let _package = new DG.Package();
 
 //name test
 //input: string s
-export function test(s) {
+export function testTypescript(s) {
     grok.shell.info(_package.webRoot);
 }

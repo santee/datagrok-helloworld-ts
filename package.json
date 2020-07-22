@@ -4,11 +4,17 @@
   "version": "0.0.1",
   "description": "",
   "dependencies": {
-    "datagrok-api": "latest"
+    "datagrok-ai-tsd": "github:SoftwareCountry/datagrok-ai-tsd",
+    "datagrok-api": "latest",
+    "typescript": "^3.9.7",
+    "webpack": "^4.43.0"
   },
   "scripts": {
     "upload-debug": "datagrok-upload https://public.datagrok.ai/api debug rebuild",
     "upload-deploy": "datagrok-upload https://public.datagrok.ai/api deploy rebuild",
     "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.12"
   }
 }
