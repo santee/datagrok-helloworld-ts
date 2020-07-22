@@ -1,0 +1,14 @@
+{
+  "name": "tshelloworld",
+  "fullName": "TsHelloWorld",
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {
+    "datagrok-api": "latest"
+  },
+  "scripts": {
+    "upload-debug": "datagrok-upload https://public.datagrok.ai/api debug rebuild",
+    "upload-deploy": "datagrok-upload https://public.datagrok.ai/api deploy rebuild",
+    "build": "webpack"
+  }
+}
