@@ -4,8 +4,12 @@
   "version": "0.0.1",
   "description": "",
   "dependencies": {
-    "datagrok-ai-tsd": "github:SoftwareCountry/datagrok-ai-tsd",
+    "@types/react": "^16.9.43",
+    "datagrok-ai-tsd": "file:../datagrok-ai-tsd",
     "datagrok-api": "latest",
+    "dts-bundle": "^0.7.3",
+    "source-map-loader": "^1.0.1",
+    "ts-loader": "^8.0.1",
     "typescript": "^3.9.7",
     "webpack": "^4.43.0"
   },
@@ -15,6 +19,7 @@
     "build": "webpack"
   },
   "devDependencies": {
+    "datagrok-tools": "^3.0.2",
     "webpack-cli": "^3.3.12"
   }
 }
