@@ -1,9 +1,9 @@
 ﻿﻿﻿//name testTypescript
-//input: string s
-export function testTypescript(s) {}
+//input: string name
+export function testTypescript() {}
 
 
-//name: ReactInfoPanel
+//name: testTypescriptPanel
 //tags: panel, widgets
 //input: string smiles {semType: Molecule}
 //output: widget result

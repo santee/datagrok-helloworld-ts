@@ -7,13 +7,21 @@ import { helloReact } from './hello-react';
 import React from "react";
 import ReactDOM from "react-dom";
 
+export const _package = new DG.Package();
+
+//name: testTypescriptPanel
+//tags: panel, widgets
+//input: string smiles {semType: Molecule}
+//output: widget result
 export function testTypescriptPanel(smiles: string) {
-    const r = React.createElement(helloReact);
+    const r = React.createElement(helloReact, { name: smiles });
     return DG.Widget.react(r); //works
 }
 
-export function testTypescript(s: string) {
-    const r = React.createElement(helloReact);
+﻿﻿﻿//name testTypescript
+//input: string name
+export function testTypescript(name: string) {
+    const r = React.createElement(helloReact, { name });
 
     let reactHost = ui.div();
     ReactDOM.render(r, reactHost); //works
@@ -22,12 +30,3 @@ export function testTypescript(s: string) {
         .add(reactHost)
         .show();
 }
-
-/*
-//name testTypescript1
-//input: string s
-export function testTypescript1(s: string) {
-
-    const r = React.createElement(helloReact);
-    const widget = DG.Widget.react(r); // fails
-}*/
