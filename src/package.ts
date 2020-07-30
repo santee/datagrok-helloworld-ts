@@ -3,12 +3,31 @@ import * as grok from 'datagrok-api/grok';
 import * as ui from 'datagrok-api/ui';
 import * as DG from "datagrok-api/dg";
 
-import {} from "datagrok-api/grok";
+import { helloReact } from './hello-react';
+import React from "react";
+import ReactDOM from "react-dom";
 
-export let _package = new DG.Package();
-
-//name test
-//input: string s
-export function testTypescript() {
-    grok.shell.info(`${_package.webRoot}`);
+export function testTypescriptPanel(smiles: string) {
+    const r = React.createElement(helloReact);
+    return DG.Widget.react(r); //works
 }
+
+export function testTypescript(s: string) {
+    const r = React.createElement(helloReact);
+
+    let reactHost = ui.div();
+    ReactDOM.render(r, reactHost); //works
+
+    ui.dialog('React custom components')
+        .add(reactHost)
+        .show();
+}
+
+/*
+//name testTypescript1
+//input: string s
+export function testTypescript1(s: string) {
+
+    const r = React.createElement(helloReact);
+    const widget = DG.Widget.react(r); // fails
+}*/
