@@ -12,9 +12,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "source-map-loader": "^1.0.1",
-    "ts-loader": "^8.0.1",
+    "ts-loader": "^8.4.0",
     "typescript": "^3.9.7",
-    "webpack": "^4.43.0"
+    "webpack": "^5.75.0"
   },
   "scripts": {
     "upload-debug": "datagrok-upload https://public.datagrok.ai/api debug",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "datagrok-tools": "^3.0.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^5.0.1"
   },
   "sources": [
     "common/react.production.min.js",
